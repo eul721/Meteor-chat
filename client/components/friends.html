@@ -1,0 +1,18 @@
+<template name="friendsPane">
+<div id="friends-pane">
+  {{#if currentUser}}
+    <button class="btn btn-primary" data-toggle="modal" data-target="#add-friend-modal">Add Friend</button>
+
+    {{ #each friends }}
+      {{ >friend }}
+    {{ /each}}
+  {{else}}
+    <h4>Please sign in</h4>
+  {{/if}}
+</div>
+</template>
+
+
+<template name="friend">
+<li><a href="#" class="friend">{{getName}}</a></li>
+</template>

@@ -1,0 +1,33 @@
+<template name="chatPane">
+  {{#if currentUser}}
+    {{#if currentChatTarget}}
+    <h2> Session with {{currentChatTarget}}</h2>
+    <div id="messages-box">
+      {{ #each messages }}
+        {{ > message}}
+      {{ /each}}
+
+    </div>
+    <div id="input-message-box">
+      <textarea name="new-message" id="new-message"></textarea>
+    </div>
+    {{else}}
+    <h4>Choose someone to chat with...</h4>
+    {{/if}}
+  {{else}}
+    <h4>Please sign in</h4>
+  {{/if}}
+</template>
+
+<template name="message">
+  {{#if spokerIsCurrentUser}}
+  <div class="cur-user-message message">
+    {{text}}
+  </div>
+  {{else}}
+  <div class="target-user-message message">
+    {{text}}
+  </div>
+  {{/if}}
+  <div class="clearfix"></div>
+</template>

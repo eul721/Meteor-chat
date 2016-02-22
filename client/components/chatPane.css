@@ -1,0 +1,25 @@
+#messages-box{
+  height: 80%;
+  overflow-y: auto;
+}
+
+#input-message-box{
+  height: 20%;
+}
+
+.cur-user-message{
+  float:right;
+  background: rgba(0, 200, 0, 0.5);
+  border-radius: 2px;
+}
+
+.target-user-message{
+  float:left;
+  background: rgba(215, 221, 245, 0.5);
+  border-radius: 2px;
+}
+
+.message{
+  padding: 5px;
+  margin-top: 2px;
+}
